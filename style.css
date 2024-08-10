@@ -1,0 +1,250 @@
+body {
+    background-image: url('img/Brown\ mini\ heart\ iPhone\ wallpaper.jpg');
+    background-size: cover; /* Faz com que a imagem cubra toda a área do corpo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    margin: 0; /* Remove as margens padrão do corpo */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão para o corpo */
+}
+
+.inteface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 34px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #995498;
+}
+/*ESTILO CABEÇALHO*/
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #320000;
+    text-decoration: none;
+    display: inline-block;
+    transition: 2s;
+    font-size: 22px;
+}
+
+header nav.menu-dekstop a:hover{
+    color: #8d4925;
+    transform: scale(1.0);
+}
+
+nav a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #8d4925;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 1.5 ease-in-out;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav.menu-dekstop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+header .btn-contato button{
+    color: #5d2417;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600px;
+    background-color: #f5f5dc;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+header .btn-contato button:hover{
+    box-shadow: 0px 0px 80px  #f5f5dcd8;
+}
+
+.logo img{
+    height: 200px;
+    width: 200px;
+}
+
+/*ESTILO MENU MOBILE*/
+.btn-abrir-menu i{
+    color:#320000;
+    font-size: 30px;
+}
+.menu-mobile{
+    background-color: #b9b9a5;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~.overlay-menu{
+    display: block;
+}
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #5d2417;
+    font-size: 30px;
+}
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+    color: #5d2417;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #c57d5662;
+    color: #5d2417;
+}
+
+.overlay-menu{
+    background-color: #bb9369b4;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .btn-abrir-menu {
+        display: none; /* Oculta o botão de menu mobile em telas maiores */
+    }
+}
+
+section {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(207, 67, 67, 0.438);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(183, 193, 211, 0.882);
+}
+
+h2 {
+    text-align: center;
+    color: rgb(53, 37, 21);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: rgb(121, 90, 56);
+    color: white;
+    padding: 14px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(218, 172, 123);
+}
+
+.form label{
+    color: #e5dde6;
+}
+/*estilo pág obg*/
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(187, 148, 105);
+    flex-direction: column;
+}
+.texto{
+    font-size: 45px;
+    color: rgb(53, 39, 24);
+    margin-bottom: 30px;
+}
+.btn{
+    padding: 15px 55px;
+    background-color: azure;
+    text-decoration: none;
+    color: rgb(241, 238, 238);
+    font-size: 18px;
+    transition:all 0.5s;
+}
+.btn :hover{
+    border-radius: 20px;
+}
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Coloca a imagem e o formulário em coluna */
+        gap: 1rem; /* Ajusta o espaçamento */
+    }
+
+    .form-image img {
+        width: 100%; /* Faz a imagem ocupar a largura total do contêiner em dispositivos móveis */
+    }
+}

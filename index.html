@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-wdth, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="mn.js" defer></script>
+    <title>Formulário</title>
+
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/GS__1_-removebg-preview.png" alt="logo portifolio">
+                </a>
+
+            </div><!--logo-->
+            <nav class="menu-dekstop">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre mim</a></li>
+                    <li><a href="habilidades.html">Curiosidades</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                </ul>
+
+            </nav><!--menu-dekstop-->
+
+            <div class="btn-contato">
+                <a href="https://ggrazzi-cs08.github.io/form.html/">
+                    <button>Contato</button>
+                </a>
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div><!--btn-abrir-menu-->
+                
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-list"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre mim</a></li>
+                        <li><a href="habilidades.html">Habilidades</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+    
+                </nav>
+    
+            </div><!--menu-mobile-->
+
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!--interface-->
+    </header>
+    <section>
+        <h2>Entre em contato</h2>
+        <form action="https://formsubmit.co/cgraziela@acad.ifma.edu.br" method="POST">
+            
+            <label>Nome</label>
+            <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+            <label>Mensagem</label>
+            <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem..." required></textarea>
+            <button type="submit">Enviar</button>
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_cc" value="prof.carlos.costa@acad.ifma.edu.br">
+           
+            <input type="hidden" name="_next" value="https://http://127.0.0.1:5500/obrigado.html">
+           </form> 
+    </section>
+</body>
+</html>
